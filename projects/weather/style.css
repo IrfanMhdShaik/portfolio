@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  transition: background 0.5s ease;
+}
+
+/* Weather container */
+.weather-container {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Heading */
+.weather-container h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  width: 70%;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.search-box button:hover {
+  background-color: #e68900;
+}
+
+/* Weather result */
+.weather-result {
+  color: #fff;
+  text-align: center;
+}
+
+.weather-result h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.weather-result p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Weather icon */
+.weather-result i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .search-box input {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+  .search-box button {
+    padding: 10px;
+  }
+  .weather-result h2 {
+    font-size: 1.5rem;
+  }
+  .weather-result i {
+    font-size: 2.5rem;
+  }
+}
+
+/* Make modal header title visible in dark mode */
+body.dark-mode .modal-header {
+  background-color: #1e1e1e; /* dark background */
+  color: #ffffff;             /* header text visible */
+  border-bottom: 1px solid #444;
+}
+
+/* Ensure modal title is visible */
+body.dark-mode .modal-title {
+  color: #ffffff !important;
+}
+
+/* Close button visible */
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+/* Dark mode modal adjustments */
+body.dark-mode .modal-content {
+  background-color: #1e1e1e; /* dark modal background */
+  color: #ffffff;             /* modal text white */
+  border: none;
+}
+
+body.dark-mode .modal-header {
+  background-color: #1e1e1e; /* header background */
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .modal-title {
+  color: #ffffff !important; /* ensure title is visible */
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1); /* make close button visible */
+}
+/* Inside projects/weather/style.css */
+body.dark-mode {
+  background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+  color: #ffffff;
+}
+
+/* Weather App Heading */
+.weather-container h1 {
+  color: #fff; /* always visible */
+}
